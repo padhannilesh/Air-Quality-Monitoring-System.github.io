@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Aerospace</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" >
+          <i class="fa-solid fa-file-dashed-line"onclick="openSidebar()"></i>
+        </div>
+        <div class="header-left">
+          <form action="" class="search-form">
+            <input type="search" name="" placeholder="search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+        </div>
+        <div class="header-right">
+          <i class="fa-solid fa-bell fa-2x"></i>
+          <i class="fa-solid fa-envelope fa-2x"></i>
+          <div id="login-btn" class="fas fa-user fa-2x"> </div>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <i class="fas fa-wind fa-2x"></i> Aerospace
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <i class="fa-solid fa-heart-pulse fa-1.8x"></i> Health Monitoring
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">poll</span> Reports
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <i class="fa fa-question-circle fa-1x" aria-hidden="true"></i> help
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">settings</span> Settings
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <i class="fa fa-sign-out fa-1x" aria-hidden="true"></i> Logout
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <p class="font-weight-bold">DASHBOARD</p>
+          
+          
+        </div>
+
+        <div class="main-cards">
+
+          <div class="card">
+            
+            <div class="card-inner">
+              <p class="text-primary">Temperature</p>
+              <i class="fa fa-thermometer-half fa-4x" aria-hidden="true"></i>
+            </div>
+            <span class="text-primary font-weight-bold">28 C</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">Carbon dioxide</p>
+              <i class="fas fa-smog fa-4x"></i>
+            </div>
+            <span class="text-primary font-weight-bold">25 PPM</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">Humidity</p>
+              <i class="fa-solid fa-droplet fa-4x"></i>
+            </div>
+            <span class="text-primary font-weight-bold">59%</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">Radon</p>
+              <i class="fas fa-radiation fa-4x"></i>
+            </div>
+            <span class="text-primary font-weight-bold">36 PPM</span>
+          </div>
+
+        </div>
+
+        <div class="charts">
+
+          <div class="charts-card">
+            <p class="chart-title"> Various Gas level</p>
+            <div id="bar-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <p class="chart-title">Month wise Gas level</p>
+            <div id="area-chart"></div>
+          </div>
+
+        </div>
+        <section class="report">
+          <div class="report-list">
+            <h1>Report</h1>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Gas Name</th>
+                  <th>level</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Risk</th>
+                  <th>Report</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td >01</td>
+                  <td>CO2</td>
+                  <td>38 PPM</td>
+                  <td>13-06-24</td>
+                  <td>10:00AM</td>
+                  <td style="color: green;">Safe</td>
+                  <td><button>View</button></td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>Radon</td>
+                  <td>63 PPM</td>
+                  <td>13-06-24</td>
+                  <td>10:00AM</td>
+                  <td style="color: #f5b74f;">Permisible</td>
+                  <td><button>View</button></td>
+                </tr>
+                <tr>
+                  <td>03</td>
+                  <td>Butane</td>
+                  <td>45 PPM</td>
+                  <td>13-06-24</td>
+                  <td>10:00AM</td>
+                  <td style="color: green;">safe</td>
+                  <td><button>View</button></td>
+                </tr>
+                <tr>
+                  <td>04</td>
+                  <td>Nitrogen dioxide</td>
+                  <td>115 PPM</td>
+                  <td>13-06-24</td>
+                  <td>10:00AM</td>
+                  <td style="color: red;">Danger</td>
+                  <td><button>View</button></td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>Hydrogen sulfide</td>
+                  <td>68 PPM</td>
+                  <td>13-06-24</td>
+                  <td>10:00AM</td>
+                  <td style="color: #f5b74f">Permisible</td>
+                  <td><button>View</button></td>
+                </tr>
+               
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+      <!-- End Main -->
+      
+
+    </div>
+    
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
