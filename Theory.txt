@@ -1,0 +1,2 @@
+Node js vs Browser
+-> Browser supports DOM and Web API whereas in Node js we have acces to modules wich have access to file system and OS
